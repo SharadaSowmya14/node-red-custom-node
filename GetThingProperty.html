@@ -1,0 +1,45 @@
+<script type="text/javascript">
+    RED.nodes.registerType('get-thing-property',{
+        category: 'function',
+        color: '#ecf0f1',
+        defaults: {
+            name: { value: "" },
+            baseurl: { value: "" },
+            thingid: { value: "" },
+            propertyid: { value: "" },
+        },
+        inputs:1,
+        outputs:1,
+        icon: "link.png",
+        label: function() {
+            return this.name||"get-thing-property";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="get-thing-property">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        <br/>
+        <label for="node-input-baseurl"><i class="icon-tag"></i>Base URL:</label>
+        <select id="node-input-baseurl">
+            <option value="http://soris-geoip.horizon-dev.siemens.io/.things">http://soris-geoip.horizon-dev.siemens.io/.things</option>
+            <option value="http://localhost:8080">http://localhost:8080</option>
+        </select>
+        <br/>
+        <label for="node-input-thingid"><i class="icon-tag"></i>Thing ID</label>
+        <input type="text" id="node-input-thingid" placeholder="thingid">
+        <label for="node-input-propertyid"><i class="icon-tag"></i>Property ID</label>
+        <input type="text" id="node-input-propertyid" placeholder="propertyid">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="get-thing-property">
+    <p>A custom node which takes in 2 params: </p>
+    <ul>
+        <li>base url</li>
+        <li>thing id</li>
+        <li>property id</li>
+    </ul>
+</script>

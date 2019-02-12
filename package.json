@@ -1,0 +1,14 @@
+{
+    "name": "get-thing-property",
+    "version": "0.0.1",
+    "author": "sharadasowmya",
+    "description": "A simple node-red node to accept 3 params(baseurl, thingid and property id) and make a GET request",
+    "node-red": {
+        "nodes": {
+            "GetThingProperty": "GetThingProperty.js"
+        }
+    },
+    "dependencies": {
+        "request": "2.88.0"
+    }
+}
