@@ -1,0 +1,59 @@
+[
+    {
+        "id": "adbd7427.1f8db8",
+        "type": "tab",
+        "label": "Get Thing Property",
+        "disabled": false,
+        "info": "Flow to retrieve id, timestamp and value for thingID and PropertyID"
+    },
+    {
+        "id": "f7059588.758ca8",
+        "type": "get-thing-property",
+        "z": "adbd7427.1f8db8",
+        "name": "",
+        "baseurl": "http://soris-geoip.horizon-dev.siemens.io/.things",
+        "thingid": "0",
+        "propertyid": "softwareID",
+        "x": 340,
+        "y": 180,
+        "wires": [
+            [
+                "bd73634c.813ca"
+            ]
+        ]
+    },
+    {
+        "id": "bd73634c.813ca",
+        "type": "debug",
+        "z": "adbd7427.1f8db8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 600,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ec7cc35e.6d88f",
+        "type": "inject",
+        "z": "adbd7427.1f8db8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "f7059588.758ca8"
+            ]
+        ]
+    }
+]
